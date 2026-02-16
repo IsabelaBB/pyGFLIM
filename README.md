@@ -5,7 +5,7 @@ This folder contain scripts to facilitate GFLIM usage.
 After downloading the LibIFT project along with GFLIM and Classify modules and this pyGFLIM folder with scripts, you must have the folowing structure:
 
 ```bash
-    LibIFT
+    LibIFT                              # LibIFT repository from https://github.com/IsabelaBB/LibIFT
     ├── bin                             # Executable files
     ├── build                           # Files generated during the compilation and linking process
     ├── cmake
@@ -16,8 +16,8 @@ After downloading the LibIFT project along with GFLIM and Classify modules and t
     │       ├── masks/                  # Corresponding masks
     │       └── splits_incremental/     # Progressive splits for incremental experiment
     ├── demo
-    |   ├── Classification/             # Source code for SVM
-    |   └── GFLIM/                      # Source code of GFLIM programs
+    |   ├── Classification/             # Source code for SVM. Repository from https://github.com/IsabelaBB/Classification
+    |   └── GFLIM/                      # Source code of GFLIM programs. Repository from https://github.com/IsabelaBB/GFLIM_BoFP
     |       ├── GFLIM/
     |       ├── GFLIM_BoFP_precompGraph/
     |       ├── GFLIM-BoFP/
@@ -26,7 +26,7 @@ After downloading the LibIFT project along with GFLIM and Classify modules and t
     ├── src                             # LibIFT source files in C
     ├── externals
     ├── lib
-    ├── pyGFLIM
+    ├── pyGFLIM                         # Python scripts for GFLIM usage. This repository.
     ├── Results
     └── windows
 ```
