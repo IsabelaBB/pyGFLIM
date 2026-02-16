@@ -31,7 +31,7 @@ After downloading the LibIFT project along with GFLIM and Classify modules and t
     └── windows
 ```
 
-The folder [Datasets](Datasets/) contains the Helminth eggs datasets from the repository [intestinal-parasites-datasets](https://github.com/LIDS-UNICAMP/intestinal-parasites-datasets) along with a folder called `incremental_splits` with json files defining the training, validation and test sets for diferent percentages of training data and 50% of test data.
+The folder [Datasets](Datasets/) contains the Helminth eggs datasets from the repository [intestinal-parasites-datasets](https://github.com/LIDS-UNICAMP/intestinal-parasites-datasets) along with a folder called `splits_incremental` with json files defining the training, validation and test sets for diferent percentages of training data and 50% of test data.
 
 ## Tutorial
 
