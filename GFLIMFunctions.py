@@ -513,7 +513,7 @@ class GFLIM_BoFP(GFLIM_ABC):
 
     def extract(self, dataset : Dataset, nlayers, 
                 layers_save_graph_act=[], layers_save_img_act=[], 
-                layers_decode=[], decoders=['graph-based']):
+                layers_decode=[], decoders=['graph-adaptive']):
         """
         Extract features from a model trained with GFLIM BoFP.
         Args:
@@ -522,7 +522,7 @@ class GFLIM_BoFP(GFLIM_ABC):
             layers_save_graph_act (list): List of layers to save the graph activations (saved in 'model_dir/layer<layer>' as json files). 
             layers_save_img_act (list): List of layers to save the image activations (saved in 'model_dir/activations<layer>' as pgm images). 
             layers_decode (list): List of layers to decode. 
-            decoders (list): List of decoders to use for decoding the layers. Options: 'user-guided', 'hybrid', 'graph-based'.
+            decoders (list): List of decoders to use for decoding the layers. Options: 'user-guided', 'hybrid', 'graph-adaptive'.
         """
 
         super().extract(dataset, nlayers, layers_save_graph_act, 
