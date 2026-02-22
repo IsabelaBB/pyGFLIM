@@ -3,6 +3,7 @@ import shutil
 import argparse
 import sys
 import subprocess
+import numpy as np
 
 def existing_file_or_dir(path):
     if not os.path.isfile(path) and not os.path.isdir(path):
@@ -159,3 +160,23 @@ def run_script(command_name, args, tmp_file=None):
         print(process.stderr)
         sys.exit(process.returncode)
     return process.stdout
+
+def vector_from_graph(graph_data):
+    """
+    Convert the graph data into a feature vector by sorting the values of each feature column and appending them into a single vector.
+    Args:        graph_data (dict): The graph data containing the number of nodes, number of features, and the feature values for each node.
+    Returns:        list: A feature vector obtained by sorting the values of each feature column and appending them into
+    """
+    num_nodes = int(graph_data['num_nodes'])
+    num_feats = int(graph_data['num_feats'])
+    feat_matrix = np.zeros((num_nodes, num_feats))
+    for i in range(int(graph_data['num_nodes'])):
+        node_feats = graph_data['node'+str(i)]['feats']
+        feat_matrix[i, :] = np.array(node_feats)
+    
+    # sort the values of each feature column and append into a single vector
+    vector = []
+    for j in range(num_feats):
+        sorted_column = np.sort(feat_matrix[:, j])
+        vector.extend(sorted_column.tolist())
+    return vector
